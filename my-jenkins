@@ -1,9 +1,9 @@
 node{
- def mvnHome   
+ def mavenHome   
  stage('1cloneCode'){
     sh "echo running a software build and deployment project for payPal"
     git "https://github.com/dbakia/maven-web-application"
-     mvnHome = tool 'maven3.8.6'
+     mavenHome = tool 'maven3.8.6'
  } 
  stage('2Test&Build'){
    sh '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'
